@@ -1,0 +1,561 @@
+﻿<Window x:Class="Ipad_Screening_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ipad_Screening_Application"
+        mc:Ignorable="d"
+        Title="IPad Screening Application v1.11" Height="500" Width="1070">
+    <ScrollViewer VerticalScrollBarVisibility="Visible" >
+        <Border Padding="10" Background="#FFA0EA9D" >
+            <StackPanel>
+
+                <!-- Grid For 3 Port panels -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- Port 1 -->
+                    <StackPanel Grid.Column="0" Margin="0 0 10 0">
+
+                        <Border BorderBrush="Black" BorderThickness="1">
+
+                            <StackPanel Background="#FFF0EBEB">
+                                <!-- Port Number -->
+                                <TextBlock 
+                                    Text="Port 1" 
+                                    FontWeight="Bold"
+                                    TextAlignment="Center"
+                                    FontSize="24"
+                                    FontFamily="Century Gothic"/>
+
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Header Port 1 -->
+                                    <TextBlock 
+                                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                    ScrollViewer.CanContentScroll="True"
+                                    Grid.Column="0"
+                                    x:Name="Header_0"
+                                    Text="{Binding Path = Device[0].Header}"
+                                    Padding="0 10"
+                                    FontSize="20"                             
+                                    FontFamily="Century Gothic"
+                                    Margin="0,0,0,0"/>
+
+
+                                    <!-- Icon -->
+                                    <Image Grid.Column="1" Width="50" Source="{Binding Path = Device[0].StatusIcon}"/>
+
+                                </Grid>
+
+                                <!--<Button x:Name="ReprintBtn_0" Content="Reprint Label" Margin="10"  IsEnabled="True" Click="submitButton_Click"/>-->
+
+                                <!-- Power question 0 -->
+                                <TextBlock Text="Power up Status(If no manually enter information):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Power_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Power_Status, Mode=TwoWay}" SelectionChanged="Power_Change_Handler" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- OEM Port 0 -->
+                                <TextBlock Text="OEM:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="OemTextBox_0" Margin="5 5" Text="{Binding Device[0].OEM, Mode=TwoWay}" />
+
+                                <!-- UDID Port 0 -->
+                                <TextBlock Text="UDID:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="UdidTextBox_0" Margin="5 5" Text="{Binding Device[0].UDID, Mode=TwoWay}"/>
+
+                                <!-- IMEI Port 0 -->
+                                <TextBlock Text="IMEI:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="ImeiTextBox_0" Margin="5 5" Text="{Binding Device[0].IMEI, Mode=TwoWay}"/>
+
+                                <!-- Serial Number Port 0 -->
+                                <TextBlock Text="Serial Number:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="SerialNumberTextBox_0" Margin="5 5" Text="{Binding Device[0].Serial_Number, Mode=TwoWay}" />
+
+                                <!-- Software Version Port 0 -->
+                                <TextBlock Text="Software Version:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="SoftwareVersionTextBox_0" Margin="5 5" Text="{Binding Device[0].Software_Version, Mode=TwoWay}"/>
+
+                                <!-- Model Port 0 -->
+                                <TextBlock Text="Model:" FontFamily="Segoe UI" Margin="5 0"/>
+
+                                <ComboBox IsEditable="{Binding Plist[0].Status}"  IsReadOnly="{Binding Plist[0].Status}"  Margin="5, 5" Name="Model_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Model, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="IPAD MINI 4"></ComboBoxItem>                                    
+                                </ComboBox>
+
+
+                                <!-- Capacity Port 0 -->
+                                <TextBlock Text="Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+
+                                <ComboBox IsEditable="{Binding Plist[0].Status}"  IsReadOnly="{Binding Plist[0].Status}"  Margin="5, 5" Name="Capacity_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Capacity, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="32 GB"></ComboBoxItem>
+                                    <ComboBoxItem Content="128 GB"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Color Port 0 -->
+                                <TextBlock Text="Color:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[0].Status}"  IsReadOnly="{Binding Plist[0].Status}"  Margin="5, 5" Name="Color_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Color, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Silver"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grey"></ComboBoxItem>
+                                    <ComboBoxItem Content="Gold"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- FMIP lock 0 -->
+                                <TextBlock Text="FMIP Locked" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[0].Status}"  IsReadOnly="{Binding Plist[0].Status}"  Margin="5, 5" Name="FMIP_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].FMIP, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>                                    
+                                </ComboBox>
+
+                                <!-- BDC lock 0 -->
+                                <TextBlock Text="Battery Design Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="BDCTextBox_0" Margin="5 5" Text="{Binding Device[0].Battery_Design_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 0 -->
+                                <TextBlock Text="Battery Full Charge Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="BFCCTextBox_0" Margin="5 5" Text="{Binding Device[0].Battery_Full_Charge_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 0 -->
+                                <TextBlock Text="Battery Cycle Count:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[0].Status}" x:Name="BCCTextBox_0" Margin="5 5" Text="{Binding Device[0].Battery_Cycle_Count, Mode=TwoWay}" />
+
+                                <!-- BH lock 0 -->
+                                <TextBlock Text="Battery Health:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="BHTextBox_0" Margin="5 5" Text="{Binding Device[0].Battery_Health, Mode=TwoWay}" />
+
+                                <!-- Charger question 0 -->
+                                <TextBlock Text="Is charger included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Charger_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Charger_Presence, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Charger question 0 -->
+                                <TextBlock Text="Is cable included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cable_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Cable_Presence, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Cosmetic question 0 -->
+                                <TextBlock Text="Cosmetic Condition:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cosmetic_0" SelectedValuePath="Content" SelectedValue="{Binding Device[0].Cosmetic_Condition, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grade-D/CID"></ComboBoxItem>                                    
+                                </ComboBox>
+
+                                
+
+                                <!-- Box question 0 -->
+                                <TextBlock Text="Box Status(can box be reused?):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Box_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Box_Status, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- DEP/MDM question 0 -->
+                                <TextBlock Text="DEP/MDM Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="DEP_MDM_0"  SelectedValuePath="Content" SelectedValue="{Binding Device[0].Dep_MDM_Status, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Status Port 0 -->
+                                <TextBlock Text="Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="True" x:Name="StatusTextBox_0" Margin="5 5 5 20" Text="{Binding Device[0].Status}" />
+
+                                <Button x:Name="Button_0" Content="{Binding Button[0].Content}" Margin="10"  IsEnabled="{Binding Button[0].Status}" Click="submitButton_Click"/>
+                                
+
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                    <!-- Port 2 -->
+                    <StackPanel Grid.Column="1" Margin="0 0 10 0" Grid.ColumnSpan="1">
+
+                        <Border BorderBrush="Black" BorderThickness="1">
+
+                            <StackPanel  Background="#FFF0EBEB">
+                                <!-- Port Number -->
+                                <TextBlock 
+                            Text="Port 2" 
+                            FontWeight="Bold"
+                            TextAlignment="Center"
+                            FontSize="24"
+                            FontFamily="Century Gothic"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Header Port 2 -->
+                                    <TextBlock 
+                                    Grid.Column="0"
+                                    x:Name="Header_1"
+                                    Text="{Binding Path = Device[1].Header}"
+                                    Padding="0 10"
+                                    FontSize="20"                             
+                                    FontFamily="Century Gothic"
+                                    Margin="0,0,0,0" Grid.ColumnSpan="3"/>
+
+                                    <!-- Icon -->
+                                    <Image Grid.Column="1" Width="50" Source="{Binding Path = Device[1].StatusIcon}"/>
+
+                                </Grid>
+                                <!--<Button x:Name="ReprintBtn_1" Content="Reprint Label" Margin="10"  IsEnabled="True" Click="submitButton_Click"/>-->
+
+                                <!-- Power question 2 -->
+                                <TextBlock Text="Power up Status(If no manually enter information):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Power_1" SelectedValue="{Binding Device[1].Power_Status, Mode=TwoWay}" SelectedValuePath="Content" SelectionChanged="Power_Change_Handler">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- OEM Port 2 -->
+                                <TextBlock Text="OEM:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="OemTextBox_1" Margin="5 5" Text="{Binding Device[1].OEM, Mode=TwoWay}" />
+
+                                <!-- UDID Port 2 -->
+                                <TextBlock Text="UDID:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="UdidTextBox_1" Margin="5 5" Text="{Binding Device[1].UDID, Mode=TwoWay}" />
+
+                                <!-- IMEI Port 2 -->
+                                <TextBlock Text="IMEI:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="ImeiTextBox_1" Margin="5 5" Text="{Binding Device[1].IMEI, Mode=TwoWay}"/>
+
+                                <!-- Serial Number Port 2 -->
+                                <TextBlock Text="Serial Number:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="SerialNumberTextBox_1" Margin="5 5" Text="{Binding Device[1].Serial_Number, Mode=TwoWay}" />
+
+                                <!-- Software Version Port 2 -->
+                                <TextBlock Text="Software Version:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="SoftwareVersionTextBox_1" Margin="5 5" Text="{Binding Device[1].Software_Version, Mode=TwoWay}"/>
+
+                                <!-- Model Port 2 -->
+                                <TextBlock Text="Model:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <!--<TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="ModelTextBox_1" Margin="5 5" Text="{Binding Device[1].Model, Mode=TwoWay}"/>-->
+                                <ComboBox IsEditable="{Binding Plist[1].Status}" Margin="5, 5" Name="Model_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Model, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="IPAD MINI 4"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Capacity Port 2 -->
+                                <TextBlock Text="Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[1].Status}"  IsReadOnly="{Binding Plist[1].Status}"  Margin="5, 5" Name="Capacity_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Capacity, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="32 GB"></ComboBoxItem>
+                                    <ComboBoxItem Content="128 GB"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Color Port 2 -->
+                                <TextBlock Text="Color:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[1].Status}"  IsReadOnly="{Binding Plist[1].Status}"  Margin="5, 5" Name="Color_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Color, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Silver"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grey"></ComboBoxItem>
+                                    <ComboBoxItem Content="Gold"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- FMIP lock 2 -->
+                                <TextBlock Text="FMIP Locked" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[1].Status}"  IsReadOnly="{Binding Plist[1].Status}"  Margin="5, 5" Name="FMIP_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].FMIP, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- BDC lock 2 -->
+                                <TextBlock Text="Battery Design Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="BDCTextBox_1" Margin="5 5" Text="{Binding Device[1].Battery_Design_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 2 -->
+                                <TextBlock Text="Battery Full Charge Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="BFCCTextBox_1" Margin="5 5" Text="{Binding Device[1].Battery_Full_Charge_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 2 -->
+                                <TextBlock Text="Battery Cycle Count:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[1].Status}" x:Name="BCCTextBox_1" Margin="5 5" Text="{Binding Device[1].Battery_Cycle_Count, Mode=TwoWay}" />
+
+                                <!-- BH lock 2 -->
+                                <TextBlock Text="Battery Health:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="BHTextBox_1" Margin="5 5" Text="{Binding Device[1].Battery_Health, Mode=TwoWay}" />
+
+                                <!-- Charger question 2 -->
+                                <TextBlock Text="is charger included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Charger_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Charger_Presence, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Charger question 2 -->
+                                <TextBlock Text="is cable included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cable_1" SelectedValuePath="Content" SelectedValue="{Binding Device[1].Cable_Presence, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Cosmetic question 2 -->
+                                <TextBlock Text="Cosmetic Condition:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cosmetic_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Cosmetic_Condition, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grade-D/CID"></ComboBoxItem>
+                                </ComboBox>
+
+                                
+
+                                <!-- Box question 2 -->
+                                <TextBlock Text="Box Status(can box be reused?):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Box_1" SelectedValuePath="Content" SelectedValue="{Binding Device[1].Box_Status, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- DEP/MDM question 2 -->
+                                <TextBlock Text="DEP/MDM Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="DEP_MDM_1"  SelectedValuePath="Content" SelectedValue="{Binding Device[1].Dep_MDM_Status, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Status Port 2 -->
+                                <TextBlock Text="Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="True" x:Name="StatusTextBox_1" Margin="5 5 5 20" Text="{Binding Device[1].Status}"/>
+
+                                <Button x:Name="Button_1" Content="{Binding Button[1].Content}" Margin="10"  IsEnabled="{Binding Button[1].Status}" Click="submitButton_Click"/>
+                                
+
+
+
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                    <!-- Port 3 -->
+                    <StackPanel Grid.Column="2" Margin="0 0 0 0">
+
+                        <Border BorderBrush="Black" BorderThickness="1">
+
+                            <StackPanel  Background="#FFF0EBEB">
+                                <!-- Port Number -->
+                                <TextBlock 
+                            Text="Port 3" 
+                            FontWeight="Bold"
+                            TextAlignment="Center"
+                            FontSize="24"
+                            FontFamily="Century Gothic"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Header Port 3 -->
+                                    <TextBlock 
+                                    Grid.Column="0"
+                                    x:Name="Header_2"
+                                    Text="{Binding Path= Device[2].Header}"
+                                    Padding="0 10"
+                                    FontSize="20"                             
+                                    FontFamily="Century Gothic"
+                                    Margin="0,0,0,0"/>
+
+                                    <!-- Icon -->
+                                    <Image Grid.Column="1" Width="50" Source="{Binding Path= Device[2].StatusIcon}"/>
+
+                                </Grid>
+
+                                <!--<Button x:Name="ReprintBtn_2" Content="Reprint Label" Margin="10"  IsEnabled="True" Click="submitButton_Click"/>-->
+
+                                <!-- Power question 3 -->
+                                <TextBlock Text="Power up Status(If no manually enter information):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Power_2" SelectedValue="{Binding Device[2].Power_Status, Mode=TwoWay}" SelectedValuePath="Content" SelectionChanged="Power_Change_Handler">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- OEM Port 3 -->
+                                <TextBlock Text="OEM:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="OemTextBox_2" Margin="5 5" Text="{Binding Device[2].OEM, Mode=TwoWay}" />
+
+                                <!-- UDID Port 2 -->
+                                <TextBlock Text="UDID:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="UdidTextBox_2" Margin="5 5" Text="{Binding Device[2].UDID, Mode=TwoWay}" />
+
+                                <!-- IMEI Port 3 -->
+                                <TextBlock Text="IMEI:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="ImeiTextBox_2" Margin="5 5" Text="{Binding Device[2].IMEI, Mode=TwoWay}"/>
+
+                                <!-- Serial Number Port 1 -->
+                                <TextBlock Text="Serial Number:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="SerialNumberTextBox_2" Margin="5 5" Text="{Binding Device[2].Serial_Number, Mode=TwoWay}" />
+
+                                <!-- Software Version Port 1 -->
+                                <TextBlock Text="Software Version:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="SoftwareVersionTextBox_2" Margin="5 5" Text="{Binding Device[2].Software_Version, Mode=TwoWay}"/>
+
+                                <!-- Model Port 3 -->
+                                <TextBlock Text="Model:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[2].Status}"  IsReadOnly="{Binding Plist[2].Status}"  Margin="5, 5" Name="Model_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].Model, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="IPAD MINI 4"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Capacity Port 3 -->
+                                <TextBlock Text="Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[2].Status}"  IsReadOnly="{Binding Plist[2].Status}"  Margin="5, 5" Name="Capacity_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].Capacity, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="32 GB"></ComboBoxItem>
+                                    <ComboBoxItem Content="128 GB"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Color Port 3 -->
+                                <TextBlock Text="Color:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[2].Status}"  IsReadOnly="{Binding Plist[2].Status}"  Margin="5, 5" Name="Color_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].Color, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Silver"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grey"></ComboBoxItem>
+                                    <ComboBoxItem Content="Gold"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- FMIP lock 3 -->
+                                <TextBlock Text="FMIP Locked" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox IsEditable="{Binding Plist[2].Status}"  IsReadOnly="{Binding Plist[2].Status}"  Margin="5, 5" Name="FMIP_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].FMIP, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- BDC lock 3 -->
+                                <TextBlock Text="Battery Design Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="BDCTextBox_2" Margin="5 5" Text="{Binding Device[2].Battery_Design_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 3 -->
+                                <TextBlock Text="Battery Full Charge Capacity:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="BFCCTextBox_2" Margin="5 5" Text="{Binding Device[2].Battery_Full_Charge_Capacity, Mode=TwoWay}" />
+
+                                <!-- BFCC lock 3 -->
+                                <TextBlock Text="Battery Cycle Count:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="{Binding Plist[2].Status}" x:Name="BCCTextBox_2" Margin="5 5" Text="{Binding Device[2].Battery_Cycle_Count, Mode=TwoWay}" />
+
+                                <!-- BH lock 0 -->
+                                <TextBlock Text="Battery Health:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="False" x:Name="BHTextBox_2" Margin="5 5" Text="{Binding Device[2].Battery_Health, Mode=TwoWay}" />
+
+                                <!-- Charger question 3 -->
+                                <TextBlock Text="is charger included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Charger_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].Charger_Presence, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Charger question 3 -->
+                                <TextBlock Text="is cable included?" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cable_2" SelectedValuePath="Content" SelectedValue="{Binding Device[2].Cable_Presence, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Cosmetic question 3 -->
+                                <TextBlock Text="Cosmetic Condition:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Cosmetic_2" SelectedValuePath="Content" SelectedValue="{Binding Device[2].Cosmetic_Condition, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="NFF-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-A"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-B"></ComboBoxItem>
+                                    <ComboBoxItem Content="Faulty-C"></ComboBoxItem>
+                                    <ComboBoxItem Content="Grade-D/CID"></ComboBoxItem>
+                                </ComboBox>
+
+
+
+                                <!-- Box question 3 -->
+                                <TextBlock Text="Box Status(can box be reused?):" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="Box_2" SelectedValuePath="Content" SelectedValue="{Binding Device[2].Box_Status, Mode=TwoWay}" >
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- DEP/MDM question 3 -->
+                                <TextBlock Text="DEP/MDM Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <ComboBox Margin="5, 5" Name="DEP_MDM_2"  SelectedValuePath="Content" SelectedValue="{Binding Device[2].Dep_MDM_Status, Mode=TwoWay}">
+                                    <ComboBoxItem Content=""></ComboBoxItem>
+                                    <ComboBoxItem Content="Yes"></ComboBoxItem>
+                                    <ComboBoxItem Content="No"></ComboBoxItem>
+                                </ComboBox>
+
+                                <!-- Status Port 3 -->
+                                <TextBlock Text="Status:" FontFamily="Segoe UI" Margin="5 0"/>
+                                <TextBox IsReadOnly="True" x:Name="StatusTextBox_2" Margin="5 5 5 20" Text="{Binding Device[2].Status}" />
+
+                                <Button x:Name="Button_2" Content="{Binding Button[2].Content}" Margin="10"  IsEnabled="{Binding Button[2].Status}" Click="submitButton_Click"/>
+
+
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+                </Grid>
+
+
+            </StackPanel>
+
+
+
+        </Border>
+    </ScrollViewer>
+</Window>

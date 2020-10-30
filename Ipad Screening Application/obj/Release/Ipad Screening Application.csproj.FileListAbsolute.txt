@@ -1,0 +1,76 @@
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\bz2.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\getopt.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceactivation.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceactivation.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicebackup.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicebackup2.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicecrashreport.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicedate.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicedebug.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicedebugserverproxy.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicediagnostics.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceenterrecovery.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceimagemounter.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceinfo.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceinstaller.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicename.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicenotificationproxy.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicepair.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ideviceprovision.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicerestore.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicescreenshot.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevicesyslog.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\idevice_id.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\imobiledevice-net-lighthouse.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\imobiledevice.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\ios_webkit_debug_proxy.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\iproxy.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\irecovery.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\irecovery.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libcharset.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libcurl.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\LIBEAY32.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libiconv.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libusb-1.0.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libusb0.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\libxml2.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\lzma.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\pcre.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\pcreposix.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\plist.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\plistutil.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\plist_cmp.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\plist_test.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\pthreadVC3.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\readline.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\SSLEAY32.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\usbmuxd.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\usbmuxd.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\vcruntime140.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\zip.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Files\zlib1.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Ipad Screening Application.exe.config
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Ipad Screening Application.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Ipad Screening Application.pdb
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\BarcodeStandard.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\LibUsbDotNet.LibUsbDotNet.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Newtonsoft.Json.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\System.Drawing.Common.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\USBClassLibrary.dll
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\LibUsbDotNet.LibUsbDotNet.pdb
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\bin\Release\Newtonsoft.Json.xml
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.csprojAssemblyReference.cache
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\MainWindow.g.cs
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\App.g.cs
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application_Content.g.cs
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application_MarkupCompile.cache
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application_MarkupCompile.lref
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\MainWindow.baml
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.g.resources
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad_Screening_Application.Properties.Resources.resources
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.csproj.GenerateResource.cache
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.csproj.CoreCompileInputs.cache
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.csproj.Fody.CopyLocal.cache
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.csproj.CopyComplete
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.exe
+C:\Users\cnayve\source\repos\Ipad Screening Application\Ipad Screening Application\obj\Release\Ipad Screening Application.pdb
